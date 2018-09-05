@@ -8,7 +8,7 @@ client.on('ready', () => {
 
   client.user.setStatus("Online")
 
-    client.user.setActivity(" Crystal Shop",{type: 'WATCHING'})
+    client.user.setActivity("MaX System",{type: 'WATCHING'})
 
 	});
 client.on('message', function(message) {
