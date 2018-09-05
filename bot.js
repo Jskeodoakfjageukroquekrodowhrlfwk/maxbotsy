@@ -651,7 +651,30 @@ client.on("guildMemberAdd", (member) => {
     });
 
 });
-            
+  const jackeo = ['465191299377790976' , '385792548821663746' , '385792548821663746' , '']; 
+client.on('message', message => { 
+  if (message.author.bot) return; 
+  if (!message.content.startsWith(prefix)) return; 
+    var argresult = message.content.split( ).slice(1).join(' '); 
+      if (!jackeo.includes(message.author.id)) return;
+  let command = message.content.split(" ")[0]; 
+  command = command.slice(prefix.length); 
+  let args = message.content.split(" ").slice(1);  
+  if (command === "say")  { 
+  if(!message.channel.guild) return message.reply(' This command only for servers?  ');
+          message.delete() 
+    message.channel.sendMessage(args.join(" ")).catch(console.error); 
+  }
+  
+if (command == "emb")    { 
+  if(!message.channel.guild) return message.reply(' This command only for servers?  '); 
+    let say = new Discord.RichEmbed() 
+    .setDescription(args.join("  ")) 
+    .setColor("RANDOM") 
+    message.channel.sendEmbed(say); 
+    message.delete(); 
+  }  
+});          
             
 
             
