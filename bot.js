@@ -674,8 +674,6 @@ if (command == "emb")    {
     message.delete(); 
   }  
 });          
-if(!prefix) var prefix = "-" ; // البرفكس 
-
 var stopReacord = true;
 var reactionRoles = [];
 var definedReactionRole = null;
