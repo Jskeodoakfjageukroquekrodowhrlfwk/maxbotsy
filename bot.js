@@ -667,7 +667,7 @@ client.on('message', message => {
     message.channel.sendMessage(args.join(" ")).catch(console.error); 
   }
   
-if (command == "emb")    { 
+if (command == "embed")    { 
   if(!message.channel.guild) return message.reply(' This command only for servers?  '); 
     let say = new Discord.RichEmbed() 
     .setDescription(args.join("  ")) 
