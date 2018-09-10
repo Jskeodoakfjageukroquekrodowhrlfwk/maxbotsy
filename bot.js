@@ -578,7 +578,7 @@ if(!c) return;
 
 
 client.on("guildMemberAdd", member => {
-      const welcomer = bot.channels.get("479720488046952466");
+let welcomer = member.guild.channels.find("name","welcome");
       if(!welcomer) return;
       if(welcomer) {
          moment.locale('ar-ly');
