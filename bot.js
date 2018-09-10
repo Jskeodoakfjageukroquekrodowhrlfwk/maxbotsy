@@ -589,8 +589,8 @@ let welcomer = member.guild.channels.find("name","welcome");
         .setColor('RANDOM')
         .setThumbnail(h.avatarURL)
         .setAuthor(h.username,h.avatarURL)
-        .addField(': تاريخ دخولك الدسكورد',`\`\`${moment(member.user.createdAt).format('D/M/YYYY h:mm a')}\`\` **\n** **  ${moment(member.user.createdAt).fromNow()} **`,true)            
-         .addField(': تاريخ دخولك السيرفر',`\`\`${moment(member.joinedAt).format('D/M/YYYY h:mm a ')}\`\` \n **${moment(member.joinedAt).startOf(' ').fromNow()} **`, true)      
+        .addField(': تاريخ دخولك الدسكورد',`\`${moment(heg.createdTimestamp).format('YYYY/M/D HH:mm:ss')} \`**\n ${moment(heg.createdTimestamp).fromNow()}**`,true)            
+         .addField(': تاريخ دخولك السيرفر',`\`${moment(heg.joinedAt).format('YYYY/M/D HH:mm:ss')}  \` **\n ${moment(heg.joinedAt).fromNow()} **`, true)      
          .setFooter(`${h.tag}`,"https://images-ext-2.discordapp.net/external/JpyzxW2wMRG2874gSTdNTpC_q9AHl8x8V4SMmtRtlVk/https/orcid.org/sites/default/files/files/ID_symbol_B-W_128x128.gif")
      welcomer.send(embed);          
                
@@ -763,7 +763,7 @@ var mentionned = message.mentions.members.first();
        
     .setColor("#0a0909")
  .setThumbnail(message.author.avatarURL)
-.addField(': تاريخ دخولك للديسكورد',` \`${moment(heg.createdTimestamp).format('YYYY/M/D HH:mm:ss')} \`**\n ${moment(heg.createdTimestamp).fromNow()}**` ,true) 
+.addField(': تاريخ دخولك للديسكورد',`\`${moment(heg.createdTimestamp).format('YYYY/M/D HH:mm:ss')} \`**\n ${moment(heg.createdTimestamp).fromNow()}**` ,true) 
 .addField(': تاريخ دخولك لسيرفرنا', `\`${moment(h.joinedAt).format('YYYY/M/D HH:mm:ss')}  \` **\n ${moment(h.joinedAt).fromNow()} **`, true)
 .addField(` :لقد قمت بدعوة `, ` **${inviteCount}** `)
 
