@@ -522,7 +522,7 @@ client.on("message", message => {
   const jimp = require('jimp');
   const w = ['./welcome_4.png'];
         let Image = Canvas.Image,
-            canvas = new Canvas(557, 241),
+            canvas = new Canvas(800, 300),
             ctx = canvas.getContext('2d');
         ctx.patternQuality = 'bilinear';
         ctx.filter = 'bilinear';
@@ -538,7 +538,7 @@ client.on("message", message => {
             let BG = Canvas.Image;
             let ground = new Image;
             ground.src = Background;
-            ctx.drawImage(ground, 0, 0, 557, 241);
+            ctx.drawImage(ground, 0, 0, 800, 300);
  
 })
  
@@ -552,7 +552,7 @@ client.on("message", message => {
           ctx.fontSize = '72px';
           ctx.fillStyle = "#ffffff";
           ctx.textAlign = "center";
-          ctx.fillText(member.user.username, 300, 120);
+          ctx.fillText(member.user.username, 545, 177);
          
           ctx.font = '16px Arial Bold';
           ctx.fontSize = '72px';
@@ -567,7 +567,7 @@ client.on("message", message => {
           ctx.arc(169.5, 148, 126.9, -100, Math.PI * 2, true);
           ctx.closePath();
           ctx.clip();
-          ctx.drawImage(ava, 49, 17, 200, 200);
+          ctx.drawImage(ava, 36, 21, 260, 260);
  			
 
 let c = member.guild.channels.find('name', 'welcome');
