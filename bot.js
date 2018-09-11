@@ -590,7 +590,7 @@ let welcomer = member.guild.channels.find("name","welcome");
         .setThumbnail(h.avatarURL)
         .setAuthor(h.username,h.avatarURL)
         .addField(': تاريخ دخولك الدسكورد',`\`${moment(heg.createdTimestamp).format('YYYY/M/D HH:mm:ss')} \`**\n ${moment(heg.createdTimestamp).fromNow()}**`,true)            
-         .addField(': تاريخ دخولك السيرفر',`\`${moment(heg.joinedAt).format('YYYY/M/D HH:mm:ss')}  \` **\n ${moment(heg.joinedAt).fromNow()} **`, true)      
+         .addField(': تاريخ دخولك السيرفر',`\`${moment(h.joinedAt).format('YYYY/M/D HH:mm:ss')}  \` **\n ${moment(h.joinedAt).fromNow()} **`, true)      
          .setFooter(`${h.tag}`,"https://images-ext-2.discordapp.net/external/JpyzxW2wMRG2874gSTdNTpC_q9AHl8x8V4SMmtRtlVk/https/orcid.org/sites/default/files/files/ID_symbol_B-W_128x128.gif")
      welcomer.send(embed);          
                
