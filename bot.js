@@ -734,7 +734,7 @@ client.on('messageReactionRemove', (reaction, user) => {
   client.on('message', message => {
           
 
-           if (message.content.startsWith(prefix + "id")) {
+           if (message.content.startsWith(prefix + "user")) {
             if(!message.channel.guild) return;
 
                 message.guild.fetchInvites().then(invs => {
