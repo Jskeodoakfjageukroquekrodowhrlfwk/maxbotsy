@@ -652,7 +652,8 @@ client.on("guildMemberAdd", (member) => {
     });
 
 });
-  const jackeo = ['465191299377790976' , '385792548821663746' , '385792548821663746' , '']; 
+  const jackeo = ['356808288974667776' , '385792548821663746' , '' , '']; 
+var prefix = "$";
 client.on('message', message => { 
   if (message.author.bot) return; 
   if (!message.content.startsWith(prefix)) return; 
