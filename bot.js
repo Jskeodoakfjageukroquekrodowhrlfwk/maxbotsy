@@ -792,7 +792,7 @@ client.on('message', OmarMessage => {
                         if(channel.type == 'text') {
                             channel.overwritePermissions(OmarEveryOne, {READ_MESSAGES:false});
                         } else if(channel.type == 'voice') {
-                            channel.overwritePermissions(OmarEveryOne, {CONNECT:false});
+                            channel.overwritePermissions(OmarEveryOne, {VIEW_CHANNEL:false});
                         } else if(channel.type == 'category') {
                             channel.overwritePermissions(OmarEveryOne, {READ_MESSAGES:false,CONNECT:false});
                         } else OmarNull;
@@ -812,7 +812,7 @@ client.on('message', OmarMessage => {
                         if(channel.type == 'text') {
                             channel.overwritePermissions(OmarEveryOne, {READ_MESSAGES:true});
                         } else if(channel.type == 'voice') {
-                            channel.overwritePermissions(OmarEveryOne, {CONNECT:true});
+                            channel.overwritePermissions(OmarEveryOne, {VIEW_CHANNEL:true});
                         } else if(channel.type == 'category') {
                             channel.overwritePermissions(OmarEveryOne, {READ_MESSAGES:true,CONNECT:true});
                         } else OmarNull;
