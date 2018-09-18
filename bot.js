@@ -780,7 +780,7 @@ client.on('message', OmarMessage => {
     var prefix = '!WoW!';
     var OmarNull = null;
     if(!OmarMessage.author.bot || OmarMessage.content.startsWith(prefix)) {
-        if(OmarMessage.content.split(' ')[0] == `$Colse-Channels`) {
+        if(OmarMessage.content.split(' ')[0] == '!Colse') {
             if(OmarMessage.guild.member(OmarMessage.author).hasPermission('MANAGE_CHANNELS') && OmarMessage.guild.member(client.user).hasPermission('MANAGE_CHANNELS')) {
                 let OmarEveryOne = OmarMessage.guild.roles.filter(r => r.name == `@everyone`).first();
                 let i = 0;
@@ -790,17 +790,17 @@ client.on('message', OmarMessage => {
                         OmarMessage.channel.send(`${OmarMessage.author}, تم اغلاق جميع الرومات`);
                     } else {
                         if(channel.type == 'text') {
-                            channel.overwritePermissions(OmarEveryOne, {SEND_MESSAGES:false});
+                            channel.overwritePermissions(OmarEveryOne, {READ_MESSAGES:false});
                         } else if(channel.type == 'voice') {
                             channel.overwritePermissions(OmarEveryOne, {CONNECT:false});
                         } else if(channel.type == 'category') {
-                            channel.overwritePermissions(OmarEveryOne, {SEND_MESSAGES:false,CONNECT:false});
+                            channel.overwritePermissions(OmarEveryOne, {READ_MESSAGES:false,CONNECT:false});
                         } else OmarNull;
                     };
                 };
             };
         };
-        if(OmarMessage.content.split(' ')[0] == `$Open-Channels`) {
+        if(OmarMessage.content.split(' ')[0] == '!Open') {
             if(OmarMessage.guild.member(OmarMessage.author).hasPermission('MANAGE_CHANNELS') && OmarMessage.guild.member(client.user).hasPermission('MANAGE_CHANNELS')) {
                 let OmarEveryOne = OmarMessage.guild.roles.filter(r => r.name == `@everyone`).first();
                 let i = 0;
@@ -810,11 +810,11 @@ client.on('message', OmarMessage => {
                         OmarMessage.channel.send(`${OmarMessage.author}, تم فتح جميع الرومات`);
                     } else {
                         if(channel.type == 'text') {
-                            channel.overwritePermissions(OmarEveryOne, {SEND_MESSAGES:true});
+                            channel.overwritePermissions(OmarEveryOne, {READ_MESSAGES:true});
                         } else if(channel.type == 'voice') {
                             channel.overwritePermissions(OmarEveryOne, {CONNECT:true});
                         } else if(channel.type == 'category') {
-                            channel.overwritePermissions(OmarEveryOne, {SEND_MESSAGES:true,CONNECT:true});
+                            channel.overwritePermissions(OmarEveryOne, {READ_MESSAGES:true,CONNECT:true});
                         } else OmarNull;
                     };
                 };
@@ -822,7 +822,6 @@ client.on('message', OmarMessage => {
         };
     };
 });
-
-            
+          
 
 client.login(process.env.BOT_TOKEN); 
